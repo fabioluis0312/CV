@@ -105,13 +105,71 @@ body {
 }
 
 @media print {
+    @page {
+        size: A4;
+        margin: 12mm;
+    }
+
     body {
-        background: none;
+        margin: 0;
         padding: 0;
+        background: #fff;
+        display: block;
     }
 
     .cv {
+        width: 150%;
+        margin: 0 auto;
+        padding: 0;
         box-shadow: none;
-        margin: 0;
+        border-radius: 0;
+        background: #fff;
+    }
+
+    /* Compactação geral */
+    * {
+        font-size: 11px !important;
+        line-height: 1.25 !important;
+    }
+
+    .nome {
+        font-size: 16px !important;
+        margin: 0 0 6px !important;
+    }
+
+    h2 {
+        font-size: 12px !important;
+        margin: 10px 0 4px !important;
+    }
+
+    p {
+        margin: 0 0 6px !important;
+    }
+
+    li {
+        margin: 0 0 2px !important;
+    }
+
+    .header {
+        margin-bottom: 10px !important;
+    }
+
+    .linha-contato {
+        gap: 10px !important;
+        margin-bottom: 4px !important;
+    }
+
+    /* Evita cortes feios no meio de blocos */
+    header,
+    section,
+    ul,
+    li {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    a {
+        color: #000;
+        text-decoration: none;
     }
 }
