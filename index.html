@@ -8,21 +8,260 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Arial', sans-serif;
+        list-style: none;
+    }
+
+    body {
+        background-color: #e3e3e3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 0;
+    }
+
+    .cv {
+        width: 210mm;
+        height: auto;
+        min-height: 297mm;
+        background: #fff;
+        color: #000;
+        list-style: none;
+        padding: 20mm;
+        line-height: 1.6;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        border-radius: 2px;
+    }
+
+    .contato a {
+        text-decoration: none;
+    }
+
+    .nome {
+        margin-top: 0;
+        margin-bottom: -5px;
+        text-align: center;
+    }
+
+    .projetos ul li {
+        list-style-type: disc;
+        margin-bottom: 3px;
+    }
+
+    .cargo {
+        text-align: center;
+        margin-bottom: -4px;
+        font-weight: normal;
+        font-size: 19px;
+        color: #555;
+    }
+
+    .localizacao {
+        text-align: center;
+        margin-bottom: 5px;
+        font-size: 0.95rem;
+    }
+
+    .linkb {
+        color: #000;
+        text-decoration: none;
+    }
+
+    .link {
+        color: #1a73e8;
+        text-decoration: none;
+    }
+
+    .linha-contato {
+        display: flex;
+        flex-direction: underline;
+        font-size: 0.87rem;
+        margin-bottom: 10px;
+    }
+
+
+
+    .header {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+
+    .contato ul {
+        display: flex;
+        gap: 15px;
+        flex-wrap: nowrap;
+    }
+
+    .certificado {
+        color: #1a73e8;
+        text-decoration: none;
+    }
+
+
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+
+        body {
+            padding: 16px;
+            background-color: #e3e3e3;
+            display: flex;
+            justify-content: center;
+        }
+
+        .cv {
+            width: 100%;
+            max-width: 420px;
+            min-height: auto;
+            height: auto;
+            padding: 18px;
+            margin: 0 auto;
+            border-radius: 6px;
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .nome {
+            font-size: 1.35rem;
+            line-height: 1.2;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .cargo {
+            font-size: 19px;
+            margin-bottom: 6px;
+            text-align: center;
+        }
+
+        .localizacao {
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 1.05rem;
+            margin-top: 16px;
+        }
+
+        p,
+        li {
+            font-size: 0.95rem;
+            line-height: 1.55;
+        }
+
+
+    }
+
+    @media print {
+        @page {
+            size: A4;
+            margin: 30px;
+            /* evita brigar com a margem do navegador */
+        }
+
+        body {
+            background: #fff !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            display: block !important;
+        }
+
+        .nome {
+            font-size: 24pt !important;
+            margin-bottom: 4pt !important;
+        }
+
+        .cargo {
+            font-size: 16pt !important;
+            margin-bottom: 1pt !important;
+        }
+
+        .localizacao {
+            font-size: 11.5pt !important;
+            margin-bottom: 2pt !important;
+        }
+
+        .cv {
+            width: auto !important;
+            max-width: 210mm !important;
+            min-height: auto !important;
+            height: auto !important;
+            margin: 0 auto !important;
+
+            /* margem interna real do PDF (controlada aqui, não com zoom) */
+            padding: 14mm 16mm !important;
+
+            background: #fff !important;
+            box-shadow: none !important;
+            border-radius: 0 !important;
+            line-height: 1 !important;
+        }
+
+        /* --- CONTATO: tira flex e deixa uma linha ATS-friendly --- */
+        .contato ul,
+        .linha-contato {
+            display: block !important;
+            text-align: center !important;
+
+            padding: 0 !important;
+        }
+
+        .linha-contato li {
+            display: inline !important;
+            white-space: nowrap !important;
+            font-size: 10.5pt !important;
+        }
+
+        .link {
+            color: #000 !important;
+            text-decoration: none !important;
+        }
+
+        .linha-contato li:not(:last-child)::after {
+            content: " | ";
+        }
+
+        .certificado {
+            display: none;
+        }
+
+        /* --- QUEBRAS DE PÁGINA: NÃO trava tudo --- */
+        header {
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+
+        section,
+        ul,
+        li {
+            break-inside: auto !important;
+            page-break-inside: auto !important;
+        }
+    }
+</style>
+
 <body>
     <div class="cv">
         <header>
             <h1 class="nome">Fábio Luís Brizotti Filho</h1>
+            <h3 class="cargo">Desenvolvedor de Software</h3>
+            <p class="localizacao">Jardim Brasil - Tietê - São Paulo</p>
             <section class="contato">
                 <ul class="linha-contato">
-                    <li><strong>Telefone:</strong> <a href="tel:+5515988099622">(15) 98809-9622</a></li>
-                    <li><strong>Email:</strong> <a
-                            href="mailto:fabioluisbrizotti@gmail.com">fabioluisbrizotti@gmail.com</a></li>
-                </ul>
-                <ul class="linha-contato">
-                    <li><strong>GitHub:</strong> <a href="https://github.com/fabioluis0312"
+                    <li><a class="linkb">(15) 98809-9622</a></li>
+                    <li><a class="linkb">fabioluisbrizotti@gmail.com</a></li>
+                    <li><a class="link" href="https://github.com/fabioluis0312"
                             target="_blank">github.com/fabioluis0312</a></li>
-                    <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/fabiobrizotti/"
-                            target="_blank">linkedin.com/in/fabiobrizotti</a></li>
+                    <li><a class="link" href="https://www.linkedin.com/in/fabiobrizotti/"
+                            target="_blank">linkedin.com/in/fabiobrizotti</a>
+                    </li>
                 </ul>
             </section>
 
@@ -30,12 +269,17 @@
 
         <main>
             <section>
+                <h2>Objetivo</h2>
+                <p>Jovem Aprendiz | Estagiário em Suporte Técnico</p>
+            </section>
+
+            <section>
                 <h2>Resumo Profissional</h2>
-                <p>Estudante de Desenvolvimento de Software com experiência acadêmica em programação,
-                    desenvolvimento web e integração de sistemas. Conhecimentos em Python, C, C#, HTML,
-                    CSS, JavaScript, Node.js e TypeScript. Atuação em projetos envolvendo automação,
-                    integração de APIs, bancos de dados relacionais e inteligência artificial.
-                    Busca oportunidade como Aprendiz ou Estagiário em Tecnologia da Informação.</p>
+                <p>Profissional da área de desenvolvimento de software, com experiências práticas em automação usando a
+                    ferramenta <strong>n8n (no-code)</strong> e com projetos simples em <strong>Python</strong>, como um jogo da velha onde você joga
+                    contra o ChatGPT. Experiência em desenvolvimento web (<strong>HTML, CSS e JavaScript</strong>), lógica de
+                    programação, banco de dados, <strong>SQL/MySQL</strong> e aplicações em <strong>C</strong> e <strong>C#</strong>.<br>
+                    Cheio de vontade de aprender e evoluir na carreira como dev.</p>
             </section>
 
             <section>
@@ -59,37 +303,42 @@
                     <li>
                         <p><span style="font-weight: bold;">Ferramentas:</span> Git, GitHub, n8n, RabbitMQ.</p>
                     </li>
+                    <li>
+                        <p><span style="font-weight: bold;">Extras citados em projetos:</span>Evolution API, Groq
+                            Whisper Large, Mistral OCR, API Gemini</p>
+                    </li>
                 </ul>
             </section>
 
-            <section>
+            <section class="projetos">
                 <h2>Projetos</h2>
 
                 <ul>
-                    <li>
-                        <strong>Sistema de Triagem Automática de Currículos (ATS)</strong><br>
-                        Sistema integrado ao <strong>e-mail corporativo</strong> que <strong>recebe currículos
-                            automaticamente</strong>, <strong>analisa os documentos com Inteligência Artificial</strong>
-                        e <strong>armazena os dados em um banco de talentos estruturado</strong>.
-                        Permite que <strong>recrutadores</strong> busquem candidatos por <strong>perfil
-                            profissional</strong> ou <strong>descrição de vaga</strong>, retornando os <strong>mais
-                            compatíveis</strong> de forma <strong>organizada</strong>.
-                        Reduz o <strong>tempo gasto na triagem manual de currículos</strong> e aumenta a
-                        <strong>produtividade do setor de RH</strong>, liberando a equipe para <strong>atividades
-                            estratégicas</strong>.
-                        <strong>Reduz custos operacionais</strong> do processo de recrutamento.
+
+                    <h3 class="titulos-projetos">Sistema de Triagem Automática de Currículos (ATS)</h3>
+                    <li>Automatizei a leitura e organização de currículos, convertendo arquivos em dados estruturados
+                        para busca e ranqueamento automático.
                     </li>
-
-                    <br>
-
                     <li>
-                        <strong>Agente Inteligente para Atendimento em Delivery via WhatsApp</strong><br>
-                        Sistema que <strong>automatiza pedidos via WhatsApp</strong>, <strong>responde dúvidas sobre
-                            produtos</strong> e <strong>registra pedidos automaticamente</strong>.
-                        Permite que o <strong>cliente faça pedidos sem atendimento humano</strong> e que a
-                        <strong>empresa organize as vendas em tempo real</strong>.
-                        Reduz <strong>erros no atendimento</strong> e aumenta a <strong>velocidade de resposta ao
-                            cliente</strong>.
+                        Usei IA para extrair e padronizar informações profissionais dos candidatos.
+                    </li>
+                    <li>
+                        <strong>Impacto:</strong> reduziu o tempo de triagem manual e facilitou a comparação entre
+                        perfis.
+                    </li>
+                    <br>
+                    <strong>
+                        <h3 class="titulos-projetos">Agente Inteligente de Atendimento via WhatsApp
+                    </strong><br></h3>
+                    <li>
+                        Desenvolvi um agente automático para atendimento via WhatsApp, capaz de receber texto, áudio e
+                        imagem.
+                    </li>
+                    <li>
+                        Integrei controle de estado, filas e banco de dados para manter histórico e evitar falhas.
+                    </li>
+                    <li>
+                        <strong>Impacto:</strong> aumentou a eficiência do atendimento e reduziu retrabalho humano.
                     </li>
                 </ul>
             </section>
@@ -111,7 +360,7 @@
                 </ul>
             </section>
 
-            <section>
+            <section class="cursos">
                 <h2>Cursos & Certificações</h2>
                 <ul>
                     <li>
@@ -135,7 +384,6 @@
 
         </main>
     </div>
-    <p class="info">Salve em 150%</p>
 </body>
 
 </html>
