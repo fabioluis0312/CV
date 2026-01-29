@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <title>Fábio Brizotti — Currículo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
 </head>
 
 <style>
@@ -98,6 +97,14 @@
         flex-wrap: nowrap;
     }
 
+    .cursos i::after {
+        content: attr(data-emitido);
+        font-style: italic;
+        float: right;
+        color: #555;
+    }
+
+
     .certificado {
         color: #1a73e8;
         text-decoration: none;
@@ -163,65 +170,61 @@
         @page {
             size: A4;
             margin: 30px;
-            /* evita brigar com a margem do navegador */
         }
 
         body {
-            background: #fff !important;
-            margin: 0 !important;
-            padding: 0 !important;
-            display: block !important;
+            background: #fff;
+            margin: 0t;
+            padding: 0;
+            display: block;
         }
 
         .nome {
-            font-size: 24pt !important;
-            margin-bottom: 4pt !important;
+            font-size: 24pt;
+            margin-bottom: 4pt;
         }
 
         .cargo {
-            font-size: 16pt !important;
-            margin-bottom: 1pt !important;
+            font-size: 16pt;
+            margin-bottom: 1pt;
         }
 
         .localizacao {
-            font-size: 11.5pt !important;
-            margin-bottom: 2pt !important;
+            font-size: 11.5pt;
+            margin-bottom: 2pt;
         }
 
         .cv {
-            width: auto !important;
-            max-width: 210mm !important;
-            min-height: auto !important;
-            height: auto !important;
-            margin: 0 auto !important;
+            width: auto;
+            max-width: 210mm;
+            min-height: auto;
+            height: auto;
+            margin: 0 auto;
+            padding: 14mm 16mm;
 
-            /* margem interna real do PDF (controlada aqui, não com zoom) */
-            padding: 14mm 16mm !important;
-
-            background: #fff !important;
-            box-shadow: none !important;
-            border-radius: 0 !important;
-            line-height: 1 !important;
+            background: #fff;
+            box-shadow: none;
+            border-radius: 0;
+            line-height: 1;
         }
 
-        /* --- CONTATO: tira flex e deixa uma linha ATS-friendly --- */
         .contato ul,
         .linha-contato {
-            display: block !important;
-            text-align: center !important;
+            display: block;
+            text-align: center;
 
-            padding: 0 !important;
+            padding: 0;
         }
 
         .linha-contato li {
-            display: inline !important;
-            white-space: nowrap !important;
-            font-size: 10.5pt !important;
+            display: inline;
+            white-space: nowrap;
+            font-size: 10.5pt;
         }
 
         .link {
-            color: #000 !important;
-            text-decoration: none !important;
+            color: #000;
+            text-decoration: none;
         }
 
         .linha-contato li:not(:last-child)::after {
@@ -232,7 +235,6 @@
             display: none;
         }
 
-        /* --- QUEBRAS DE PÁGINA: NÃO trava tudo --- */
         header {
             break-inside: avoid;
             page-break-inside: avoid;
@@ -241,8 +243,8 @@
         section,
         ul,
         li {
-            break-inside: auto !important;
-            page-break-inside: auto !important;
+            break-inside: auto;
+            page-break-inside: auto;
         }
     }
 </style>
@@ -251,7 +253,7 @@
     <div class="cv">
         <header>
             <h1 class="nome">Fábio Luís Brizotti Filho</h1>
-            <h3 class="cargo">Desenvolvedor de Software</h3>
+            <h3 class="cargo">Suporte Técnico</h3>
             <p class="localizacao">Jardim Brasil - Tietê - São Paulo</p>
             <section class="contato">
                 <ul class="linha-contato">
@@ -275,11 +277,9 @@
 
             <section>
                 <h2>Resumo Profissional</h2>
-                <p>Profissional da área de desenvolvimento de software, com experiências práticas em automação usando a
-                    ferramenta <strong>n8n (no-code)</strong> e com projetos simples em <strong>Python</strong>, como um jogo da velha onde você joga
-                    contra o ChatGPT. Experiência em desenvolvimento web (<strong>HTML, CSS e JavaScript</strong>), lógica de
-                    programação, banco de dados, <strong>SQL/MySQL</strong> e aplicações em <strong>C</strong> e <strong>C#</strong>.<br>
-                    Cheio de vontade de aprender e evoluir na carreira como dev.</p>
+                <p>Estudante de Desenvolvimento de Sistemas com foco em backend <strong>(C, C# e Python)</strong>. Busco oportunidade na
+                    área de <strong>Suporte Técnico</strong> ou <strong>TI</strong> para adquirir experiência prática. Perfil autodidata, com estudos
+                    constantes e interesse em evolução técnica contínua.</p>
             </section>
 
             <section>
@@ -292,10 +292,10 @@
                         </p>
                     </li>
                     <li>
-                        <p><span style="font-weight: bold;">Linguagens & Backend:</span> Python, C, C#, Node.js.</p>
+                        <p><span style="font-weight: bold;">Linguagens & Backend:</span> Python, C, C#.</p>
                     </li>
                     <li>
-                        <p><span style="font-weight: bold;">Frontend:</span> HTML, CSS, JavaScript, TypeScript.</p>
+                        <p><span style="font-weight: bold;">Frontend:</span> HTML, CSS.</p>
                     </li>
                     <li>
                         <p><span style="font-weight: bold;">Banco de Dados:</span> MySQL, PostgreSQL, Redis.</p>
@@ -304,8 +304,7 @@
                         <p><span style="font-weight: bold;">Ferramentas:</span> Git, GitHub, n8n, RabbitMQ.</p>
                     </li>
                     <li>
-                        <p><span style="font-weight: bold;">Extras citados em projetos:</span>Evolution API, Groq
-                            Whisper Large, Mistral OCR, API Gemini</p>
+                        <p><span style="font-weight: bold;">Sistemas Operacionais:</span> Linux, Windows.</p>
                     </li>
                 </ul>
             </section>
@@ -364,9 +363,11 @@
                 <h2>Cursos & Certificações</h2>
                 <ul>
                     <li>
-                        <strong>Introducing Python</strong><br>
+                        <strong>The Legend of Python</strong><i class="emitido"
+                            data-emitido="Emitido em jan 2026"></i><br>
                         Codedex<br>
-                        <a class="certificado" target="_blank" href="#">
+                        <a class="certificado" target="_blank"
+                            href="https://www.codedex.io/certificates/df493cd6-8392-4829-90a6-1f62641356a6">
                             <strong>Certificate</strong>
                         </a>
                     </li>
