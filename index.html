@@ -98,7 +98,7 @@
     }
 
     .cursos i::after {
-        content: attr(data-emitido);
+        content: attr(data-emitido) attr(cod-credencial);
         font-style: italic;
         float: right;
         color: #555;
@@ -116,7 +116,7 @@
     @media (max-width: 768px) {
 
         body {
-            padding: 16px;
+            padding: 8px;
             background-color: #e3e3e3;
             display: flex;
             justify-content: center;
@@ -127,11 +127,26 @@
             max-width: 420px;
             min-height: auto;
             height: auto;
-            padding: 18px;
+            padding: 16px;
             margin: 0 auto;
             border-radius: 6px;
             box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
         }
+
+        .linha-contato {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 1px;
+        }
+
+        .linha-contato li {
+            display: block;
+            margin: 0;
+            padding: 0;
+            line-height: 1.2;
+        }
+
 
         .nome {
             font-size: 1.35rem;
@@ -162,8 +177,6 @@
             font-size: 0.95rem;
             line-height: 1.55;
         }
-
-
     }
 
     @media print {
@@ -219,7 +232,7 @@
         .linha-contato li {
             display: inline;
             white-space: nowrap;
-            font-size: 10.5pt;
+            font-size: 9.5pt;
         }
 
         .link {
@@ -235,16 +248,21 @@
             display: none;
         }
 
-        header {
+        header,
+        section {
             break-inside: avoid;
             page-break-inside: avoid;
         }
 
-        section,
-        ul,
-        li {
+        ul {
             break-inside: auto;
             page-break-inside: auto;
+        }
+
+        h2,
+        h3 {
+            break-after: avoid;
+            page-break-after: avoid;
         }
     }
 </style>
@@ -274,14 +292,16 @@
                 <h2>Objetivo</h2>
                 <p>Jovem Aprendiz | Estagiário em Suporte Técnico</p>
             </section>
-
+            <!-- Resumo Profissional -->
             <section>
                 <h2>Resumo Profissional</h2>
-                <p>Estudante de Desenvolvimento de Sistemas com foco em backend <strong>(C, C# e Python)</strong>. Busco oportunidade na
-                    área de <strong>Suporte Técnico</strong> ou <strong>TI</strong> para adquirir experiência prática. Perfil autodidata, com estudos
+                <p>Estudante de Desenvolvimento de Sistemas com foco em backend <strong>(C, C# e Python)</strong>. Busco
+                    oportunidade na
+                    área de <strong>Suporte Técnico</strong> ou <strong>TI</strong> para adquirir experiência prática.
+                    Perfil autodidata, com estudos
                     constantes e interesse em evolução técnica contínua.</p>
             </section>
-
+            <!-- Habilidades Técnicas -->
             <section>
                 <h2>Habilidades Técnicas</h2>
                 <ul>
@@ -308,12 +328,11 @@
                     </li>
                 </ul>
             </section>
-
+            <!-- Projetos -->
             <section class="projetos">
                 <h2>Projetos</h2>
 
                 <ul>
-
                     <h3 class="titulos-projetos">Sistema de Triagem Automática de Currículos (ATS)</h3>
                     <li>Automatizei a leitura e organização de currículos, convertendo arquivos em dados estruturados
                         para busca e ranqueamento automático.
@@ -341,7 +360,7 @@
                     </li>
                 </ul>
             </section>
-
+            <!-- Formação Acadêmica -->
             <section>
                 <h2>Formação Acadêmica</h2>
                 <ul>
@@ -358,14 +377,24 @@
                     </li>
                 </ul>
             </section>
-
+            <!-- Cursos & Certificação -->
             <section class="cursos">
                 <h2>Cursos & Certificações</h2>
                 <ul>
                     <li>
+                        <strong>Fundamentos de TI: Hardware e Software</strong><i class="emitido"
+                            data-emitido="Emitido em fev 2026"></i><br>
+                        Fundação Bradesco<i class="credencial"
+                            cod-credencial="Credencial: 1465B434-05FB-466F-B36A-023D12F7D0DE"></i><br>
+                        <a class="certificado" target="_blank"
+                            href="https://drive.google.com/file/d/15Z1uU5z8jh5cAaK9CN_Dsm4lAJb7UxJF/view?usp=sharing">
+                            <strong>Certificate</strong>
+                        </a>
+                    </li>
+                    <li>
                         <strong>The Legend of Python</strong><i class="emitido"
                             data-emitido="Emitido em jan 2026"></i><br>
-                        Codedex<br>
+                        Codedex<i class="credencial" cod-credencial="Credencial: 173099581"></i><br>
                         <a class="certificado" target="_blank"
                             href="https://www.codedex.io/certificates/df493cd6-8392-4829-90a6-1f62641356a6">
                             <strong>Certificate</strong>
@@ -373,12 +402,23 @@
                     </li>
 
                     <li>
-                        <strong>Programador em 72Hrs</strong><br>
+                        <strong>Programador em 72Hrs</strong><i class="emitido"
+                            data-emitido="Emitido em out 2025"></i><br>
                         DevClub<br>
                         <a class="certificado" target="_blank"
                             href="https://drive.google.com/file/d/1Jd4nBUUtagGF4LFQLMTHlpin918eXxy3/view?usp=sharing">
                             <strong>Certificate</strong>
                         </a>
+                    <li>
+                        <strong>Engenharia de Dados</strong><i class="emitido" data-emitido="Emitido em ago 2024"
+                            credencial="d3f7605c6b7bd56884000d7b44706e08"></i><br>
+                        Alura<i class="credencial"
+                            cod-credencial="Credencial: d3f7605c6b7bd56884000d7b44706e08"></i><br>
+                        <a class="certificado" target="_blank"
+                            href="https://cursos.alura.com.br/user/00001096499538SP/fullCertificate/d3f7605c6b7bd56884000d7b44706e08">
+                            <strong>Certificate</strong>
+                        </a>
+                    </li>
                     </li>
                 </ul>
             </section>
