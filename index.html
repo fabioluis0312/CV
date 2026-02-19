@@ -5,273 +5,15 @@
     <meta charset="UTF-8">
     <title>Fábio Brizotti — Currículo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Arial', sans-serif;
-        list-style: none;
-    }
-
-    body {
-        background-color: #e3e3e3;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 40px 0;
-        margin: 20px;
-    }
-
-    .cv {
-        width: 210mm;
-        height: auto;
-        min-height: 297mm;
-        background: #fff;
-        color: #000;
-        list-style: none;
-        padding: 20mm;
-        line-height: 1.6;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-        border-radius: 2px;
-    }
-
-    .contato a {
-        text-decoration: none;
-    }
-
-    .nome {
-        margin-top: 0;
-        margin-bottom: -5px;
-        text-align: center;
-    }
-
-    .projetos ul li {
-        list-style-type: disc;
-        margin-bottom: 3px;
-    }
-
-    .cargo {
-        text-align: center;
-        margin-bottom: -4px;
-        font-weight: normal;
-        font-size: 19px;
-        color: #555;
-    }
-
-    .titulos-projetos {
-        font-weight: bold;
-        margin-bottom: 6px;
-    }
-
-    .localizacao {
-        text-align: center;
-        margin-bottom: 5px;
-        font-size: 0.95rem;
-    }
-
-    .linkb {
-        color: #000;
-        text-decoration: none;
-    }
-
-    .link {
-        color: #1a73e8;
-        text-decoration: none;
-    }
-
-    .linha-contato {
-        display: flex;
-        flex-direction: underline;
-        font-size: 0.87rem;
-        margin-bottom: 10px;
-    }
-
-
-
-    .header {
-        text-align: center;
-        margin-bottom: 25px;
-    }
-
-
-    .contato ul {
-        display: flex;
-        gap: 15px;
-        flex-wrap: nowrap;
-    }
-
-    .cursos i::after {
-        content: attr(data-emitido) attr(cod-credencial);
-        font-style: italic;
-        float: right;
-        color: #555;
-    }
-
-
-    .certificado {
-        color: #1a73e8;
-        text-decoration: none;
-    }
-
-
-
-    /* MOBILE */
-    @media (max-width: 768px) {
-
-        body {
-            padding: 8px;
-            background-color: #e3e3e3;
-            display: flex;
-            justify-content: center;
-        }
-
-        .cv {
-            width: 100%;
-            max-width: 420px;
-            min-height: auto;
-            height: auto;
-            padding: 16px;
-            margin: 0 auto;
-            border-radius: 6px;
-            box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
-        }
-
-        .linha-contato {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-bottom: 1px;
-        }
-
-        .linha-contato li {
-            display: block;
-            margin: 0;
-            padding: 0;
-            line-height: 1.2;
-        }
-
-
-        .nome {
-            font-size: 1.35rem;
-            line-height: 1.2;
-            margin-bottom: 10px;
-            text-align: center;
-        }
-
-        .cargo {
-            font-size: 19px;
-            margin-bottom: 6px;
-            text-align: center;
-        }
-
-        .localizacao {
-            font-size: 0.9rem;
-            margin-bottom: 5px;
-            text-align: center;
-        }
-
-        h2 {
-            font-size: 1.05rem;
-            margin-top: 16px;
-        }
-
-        p,
-        li {
-            font-size: 0.95rem;
-            line-height: 1.55;
-        }
-    }
-
-    @media print {
-        @page {
-            size: A4;
-            margin: 30px;
-        }
-
-        body {
-            background: #fff;
-            margin: 0t;
-            padding: 0;
-            display: block;
-        }
-
-        .nome {
-            font-size: 24pt;
-            margin-bottom: 4pt;
-        }
-
-        .cargo {
-            font-size: 16pt;
-            margin-bottom: 1pt;
-        }
-
-        .localizacao {
-            font-size: 11.5pt;
-            margin-bottom: 2pt;
-        }
-
-        .cv {
-            width: auto;
-            max-width: 210mm;
-            min-height: auto;
-            height: auto;
-            margin: 0 auto;
-            padding: 14mm 16mm;
-
-            background: #fff;
-            box-shadow: none;
-            border-radius: 0;
-            line-height: 1;
-        }
-
-        .contato ul,
-        .linha-contato {
-            display: block;
-            text-align: center;
-
-            padding: 0;
-        }
-
-        .linha-contato li {
-            display: inline;
-            white-space: nowrap;
-            font-size: 9.5pt;
-        }
-
-        .link {
-            color: #000;
-            text-decoration: none;
-        }
-
-        .linha-contato li:not(:last-child)::after {
-            content: " | ";
-        }
-
-        .certificado {
-            display: none;
-        }
-
-        header,
-        section {
-            break-inside: avoid;
-            page-break-inside: avoid;
-        }
-
-        ul {
-            break-inside: auto;
-            page-break-inside: auto;
-        }
-
-        h2,
-        h3 {
-            break-after: avoid;
-            page-break-after: avoid;
-        }
-    }
-</style>
 
 <body>
     <div class="cv">
@@ -295,12 +37,12 @@
 
         <main>
             <section>
-                <h2>Objetivo</h2>
+                <h2 style="font-size: 20px;">Objetivo</h2>
                 <p>Jovem Aprendiz | Estagiário nivel Médio em Suporte Técnico | TI</p>
             </section>
             <!-- Resumo Profissional -->
             <section>
-                <h2>Resumo Profissional</h2>
+                <h2 style="margin-top: 20px; font-size: 20px;">Resumo Profissional</h2>
                 <p>Estudante de Desenvolvimento de Software.
                     Buscando oportunidade na área de <strong>Suporte Técnico</strong> ou <strong>TI</strong>.
                     Possui conhecimento base em sistemas operacionais, redes e resolução de problemas técnicos.
@@ -308,29 +50,29 @@
             </section>
             <!-- Formação Acadêmica -->
             <section>
-                <h2>Formação Acadêmica</h2>
+                <h2 style="margin-top: 20px; font-size: 20px;">Formação Acadêmica</h2>
                 <ul>
                     <li>
-                        <strong>Curso Técnico em Desenvolvimento de Sistemas</strong><br>
-                        ETEC Dr. Nelson Vianna – Tietê/SP<br>
-                        2025 – 2026 (em andamento)
+                        <p><strong>Curso Técnico em Desenvolvimento de Sistemas</strong><br>
+                            ETEC Dr. Nelson Vianna – Tietê/SP<br>
+                            2025 – 2026 (em andamento)</p>
                     </li>
 
                     <li>
-                        <strong>Ensino Medio</strong><br>
-                        Escola Plinio Rodrigues de Morais - Tietê/SP<br>
-                        2024 – 2026 (em andamento)
+                        <p><strong>Ensino Medio</strong><br>
+                            Escola Plinio Rodrigues de Morais - Tietê/SP<br>
+                            2024 – 2026 (em andamento)</p>
                     </li>
                 </ul>
             </section>
 
             <!-- Habilidades Técnicas -->
             <section>
-                <h2>Habilidades Técnicas</h2>
+                <h2 style="margin-top: 20px; font-size: 20px;">Habilidades Técnicas</h2>
                 <ul>
                     <li>
                         <p><span style="font-weight: bold;">Inteligência Artificial & IA:</span> Integração com LLMs
-                            (GPT, Gemini), Prompt Engineering, RAG (Retrieval-Augmented Generation), NLP (Natural
+                            (GPT, Gemini), RAG (Retrieval-Augmented Generation), NLP (Natural
                             Language Processing), LangChain.
                         </p>
                     </li>
@@ -356,54 +98,59 @@
             </section>
             <!-- Cursos & Certificação -->
             <section class="cursos">
-                <h2>Cursos & Certificações</h2>
+                <h2 style="margin-top: 20px; font-size: 20px;">Cursos & Certificações</h2>
                 <ul>
                     <li>
-                        <strong>Fundamentos de TI: Hardware e Software</strong><i class="emitido"
-                            data-emitido="Emitido em fev 2026"></i><br>
-                        Fundação Bradesco<i class="credencial"
-                            cod-credencial="Credencial: 1465B434-05FB-466F-B36A-023D12F7D0DE"></i><br>
-                        <a class="certificado" target="_blank"
-                            href="https://drive.google.com/file/d/15Z1uU5z8jh5cAaK9CN_Dsm4lAJb7UxJF/view?usp=sharing">
-                            <strong>Certificate</strong>
+                        <p><strong>Fundamentos de TI: Hardware e Software</strong><i class="emitido"
+                                data-emitido="Emitido em fev 2026"></i><br>
+                            Fundação Bradesco<i class="credencial"
+                                cod-credencial="Credencial: 1465B434-05FB-466F-B36A-023D12F7D0DE"></i><br>
+                            <a class="certificado" target="_blank"
+                                href="https://drive.google.com/file/d/15Z1uU5z8jh5cAaK9CN_Dsm4lAJb7UxJF/view?usp=sharing">
+                                <strong>Certificate</strong>
+                        </p>
                         </a>
                     </li>
                     <li>
-                        <strong>The Legend of Python</strong><i class="emitido"
-                            data-emitido="Emitido em jan 2026"></i><br>
-                        Codedex<i class="credencial" cod-credencial="Credencial: 173099581"></i><br>
-                        <a class="certificado" target="_blank"
-                            href="https://www.codedex.io/certificates/df493cd6-8392-4829-90a6-1f62641356a6">
-                            <strong>Certificate</strong>
+                        <p><strong>The Legend of Python</strong><i class="emitido"
+                                data-emitido="Emitido em jan 2026"></i><br>
+                            Codedex<i class="credencial" cod-credencial="Credencial: 173099581"></i><br>
+                            <a class="certificado" target="_blank"
+                                href="https://www.codedex.io/certificates/df493cd6-8392-4829-90a6-1f62641356a6">
+                                <strong>Certificate</strong>
+                        </p>
                         </a>
                     </li>
 
                     <li>
-                        <strong>Programador em 72Hrs</strong><i class="emitido"
-                            data-emitido="Emitido em out 2025"></i><br>
-                        DevClub<br>
-                        <a class="certificado" target="_blank"
-                            href="https://drive.google.com/file/d/1Jd4nBUUtagGF4LFQLMTHlpin918eXxy3/view?usp=sharing">
-                            <strong>Certificate</strong>
+                        <p><strong>Programador em 72Hrs</strong><i class="emitido"
+                                data-emitido="Emitido em out 2025"></i><br>
+                            DevClub<br>
+                            <a class="certificado" target="_blank"
+                                href="https://drive.google.com/file/d/1Jd4nBUUtagGF4LFQLMTHlpin918eXxy3/view?usp=sharing">
+                                <strong>Certificate</strong>
+                        </p>
                         </a>
                     </li>
                     <li>
-                        <strong>FEIRA DO EMPREENDEDOR SP 2025</strong><i class="emitido"
-                            data-emitido="Emitido em out 2025"></i><br>
-                        Sebrae<i class="credencial" cod-credencial="Credencial: 68f8f824c8113c4cde121aa2"></i><br>
-                        <a class="certificado" target="_blank"
-                            href="https://api-certificados.sebrae.com.br/v1/public/certificado/arquivo/68f8f824c8113c4cde121aa2">
-                            <strong>Certificate</strong>
+                        <p><strong>FEIRA DO EMPREENDEDOR SP 2025</strong><i class="emitido"
+                                data-emitido="Emitido em out 2025"></i><br>
+                            Sebrae<i class="credencial" cod-credencial="Credencial: 68f8f824c8113c4cde121aa2"></i><br>
+                            <a class="certificado" target="_blank"
+                                href="https://api-certificados.sebrae.com.br/v1/public/certificado/arquivo/68f8f824c8113c4cde121aa2">
+                                <strong>Certificate</strong>
+                        </p>
                         </a>
                     </li>
                     <li>
-                        <strong>Engenharia de Dados</strong><i class="emitido" data-emitido="Emitido em ago 2024"
-                            credencial="d3f7605c6b7bd56884000d7b44706e08"></i><br>
-                        Alura<i class="credencial"
-                            cod-credencial="Credencial: d3f7605c6b7bd56884000d7b44706e08"></i><br>
-                        <a class="certificado" target="_blank"
-                            href="https://cursos.alura.com.br/user/00001096499538SP/fullCertificate/d3f7605c6b7bd56884000d7b44706e08">
-                            <strong>Certificate</strong>
+                        <p><strong>Engenharia de Dados</strong><i class="emitido" data-emitido="Emitido em ago 2024"
+                                credencial="d3f7605c6b7bd56884000d7b44706e08"></i><br>
+                            Alura<i class="credencial"
+                                cod-credencial="Credencial: d3f7605c6b7bd56884000d7b44706e08"></i><br>
+                            <a class="certificado" target="_blank"
+                                href="https://cursos.alura.com.br/user/00001096499538SP/fullCertificate/d3f7605c6b7bd56884000d7b44706e08">
+                                <strong>Certificate</strong>
+                        </p>
                         </a>
                     </li>
                     </li>
@@ -411,52 +158,86 @@
             </section>
             <!-- Projetos -->
             <section class="projetos">
-                <h2>Projetos</h2>
+                <h2 style="margin-top: 20px; font-size: 20px;">Projetos</h2>
 
                 <ul>
-                    <h4 style="margin-top: 12px;">Triagem automatizada para banco de talentos</h4>
+                    <h2 style="margin-top: 12px; font-size: 16px;">Escola Estadual Plinio Rodrigues de Morais</h2>
                     <li>
-                        Sistema automatizado para coleta de curriculos enviados via <strong>email</strong> com formato
-                        <strong>PDF, DOCX e TXT</strong>.<br>
-                        Armazena dados em um <strong>Banco de Dados</strong> relacional(MySQL).<br>
-                        Puxa dados com base na <strong>Vaga</strong> ou <strong>Perfil</strong> desejado pelo
-                        <strong>recrutador</strong>.<br>
-                        Ultiliza <strong>IA</strong>(Inteligência Artificial) para a <strong>classificação
-                            semântica</strong>.<br>
+                        <p>
+                            Criei e publiquei um site responsivo para centralizar informações da escola (contato,
+                            localização, comunicados e seções institucionais). Estruturei o HTML de forma semântica e
+                            ajustei pontos de SEO e performance. Versionamento com Git/GitHub e publicação via GitHub
+                            Pages.
+                        </p>
                     </li>
-                    <strong>Impacto:</strong> <strong>Reduziu o tempo do Recrutador</strong> em aproximadamente
-                    <strong>89%</strong> e <strong>modernizou</strong> o processo de triagem,
-                    <strong>aumentando</strong> a assertividade na seleção de candidatos.<br></strong>
+                    <li>
+                        <p>
+                            <strong>Link:</strong> <a class="link" href="https://fabioluis0312.github.io/Plinio/"
+                                target="_blank">fabioluis0312.github.io/Plinio/</a><br></li>
+                        <p>
+                            <li>
+                            <p><strong>Tecnologias:</strong> HTML, CSS, JavaScript, Git/GitHub, GitHub Pages.</p>
+                            </li>
+                        </p>
+                        <h2 style="margin-top: 12px; font-size: 16px;">Triagem automatizada para banco de talentos</h2>
+                    <li>
+                        <p>
+                            Sistema automatizado para coleta de curriculos enviados via <strong>email</strong> com
+                            formato
+                            <strong>PDF, DOCX e TXT</strong>.<br>
+                            Armazena dados em um <strong>Banco de Dados</strong> relacional(MySQL).<br>
+                            Puxa dados com base na <strong>Vaga</strong> ou <strong>Perfil</strong> desejado pelo
+                            <strong>recrutador</strong>.<br>
+                            Ultiliza <strong>IA</strong>(Inteligência Artificial) para a <strong>classificação
+                                semântica</strong>.<br>
+                        </p>
+                    </li>
+                    <p><strong>Impacto:</strong> <strong>Reduziu o tempo do Recrutador</strong> em aproximadamente
+                        <strong>89%</strong> e <strong>modernizou</strong> o processo de triagem,
+                        <strong>aumentando</strong> a assertividade na seleção de candidatos.<br></strong>
+                    </p>
                     </li>
 
 
-                    <h4 style="margin-top: 20px;">Atendente multi-funcional humanizado para WhatsApp
-                        </strong><br></h4>
+                    <h2 style="margin-top: 20px; font-size: 16px;">Atendente multi-funcional humanizado para
+                        WhatsApp<br></h2>
                     <li>
-                        Sistema para <strong>automatizar</strong> o atendimento de clientes <strong>on-line</strong> via
-                        <strong>WhatsApp</strong>.<br>
-                        Recebe as mensagens, que passam por um tratamento <strong>anti-spam (Rate Limiting)</strong> e,
-                        após isso, passam por um <strong>pré-cadastro automático</strong> do número do cliente. Entra em
-                        um funil para verificar se o atendente respondeu ou não, para que não haja dupla mensagem ou
-                        interferência do sistema.<br>
-                        Verifica o tipo de mensagem: se for texto, é encaminhada diretamente ao <strong>modelo de IA
-                            (Inteligência Artificial)</strong>; se for imagem, é encaminhada para um sistema de mensagem
-                        já pronto, informando que não consegue visualizar; se for áudio, é encaminhada para um
-                        <strong>modelo de IA capaz de interpretar áudio</strong>.<br>
-                        Após a conclusão do sistema de funil, é enviada ao sistema de mensageria
-                        (<strong>RabbitMQ</strong>) para que passe pelo processo de juntar as mensagens e enviá-las ao
-                        modelo de IA (Inteligência Artificial).<br>
-                        O <strong>RabbitMQ</strong>, ao receber as mensagens do modelo de IA, encaminha-as para um
-                        processo de <strong>quebra de texto</strong>, onde uma mensagem possivelmente extensa é separada
-                        em pequenas partes, deixando o cliente mais confortável.<br>
-                        O atendente multifuncional também consegue realizar a <strong>pré-venda</strong>, acessando um
-                        <strong>banco de dados com o estoque de produtos</strong> prontos para venda.<br>
+                        <p>
+                            Sistema para <strong>automatizar</strong> o atendimento de clientes <strong>on-line</strong>
+                            via
+                            <strong>WhatsApp</strong>.<br>
+                            Recebe as mensagens, que passam por um tratamento <strong>anti-spam (Rate Limiting)</strong>
+                            e,
+                            após isso, passam por um <strong>pré-cadastro automático</strong> do número do cliente.
+                            Entra em
+                            um funil para verificar se o atendente respondeu ou não, para que não haja dupla mensagem ou
+                            interferência do sistema.<br>
+                            Verifica o tipo de mensagem: se for texto, é encaminhada diretamente ao <strong>modelo de IA
+                                (Inteligência Artificial)</strong>; se for imagem, é encaminhada para um sistema de
+                            mensagem
+                            já pronto, informando que não consegue visualizar; se for áudio, é encaminhada para um
+                            <strong>modelo de IA capaz de interpretar áudio</strong>.<br>
+                            Após a conclusão do sistema de funil, é enviada ao sistema de mensageria
+                            (<strong>RabbitMQ</strong>) para que passe pelo processo de juntar as mensagens e enviá-las
+                            ao
+                            modelo de IA (Inteligência Artificial).<br>
+                            O <strong>RabbitMQ</strong>, ao receber as mensagens do modelo de IA, encaminha-as para um
+                            processo de <strong>quebra de texto</strong>, onde uma mensagem possivelmente extensa é
+                            separada
+                            em pequenas partes, deixando o cliente mais confortável.<br>
+                            O atendente multifuncional também consegue realizar a <strong>pré-venda</strong>, acessando
+                            um
+                            <strong>banco de dados com o estoque de produtos</strong> prontos para venda.<br>
+                        </p>
                     </li>
                     <li>
-                        <strong>Impacto:</strong> Reduziu o tempo de espera do cliente em aproximadamente
-                        <strong>43%</strong>, <strong>melhorou a satisfação</strong> do cliente e <strong>aumentou as
-                            vendas</strong> em cerca de <strong>15%</strong> devido à eficiência e personalização do
-                        atendimento.
+                        <p>
+                            <strong>Impacto:</strong> Reduziu o tempo de espera do cliente em aproximadamente
+                            <strong>43%</strong>, <strong>melhorou a satisfação</strong> do cliente e <strong>aumentou
+                                as
+                                vendas</strong> em cerca de <strong>15%</strong> devido à eficiência e personalização do
+                            atendimento.
+                        </p>
                     </li>
                 </ul>
             </section>
