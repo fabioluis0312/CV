@@ -219,15 +219,15 @@
         }
 
         .linha-contato {
-            display: block !important;
-            text-align: center !important;
-            margin: 0 !important;
-            padding: 0 !important;
+            display: block;
+            text-align: center;
+            margin: 0;
+            padding: 0;
         }
 
         .linha-contato li {
-            display: inline !important;
-            white-space: nowrap !important;
+            display: inline;
+            white-space: nowrap;
         }
 
         .linha-contato li:not(:last-child)::after {
