@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Currículo - Fábio Luís Brizotti Filho</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        html {
+            font-family: Arial, Calibri, "Times New Roman", serif;
+        }
+
+        .nome,
+        .cargo,
+        .localizacao,
+        .linha-contato {
+            text-align: left;
+        }
+
+        .contato ul.linha-contato {
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .linha-contato li:not(:last-child)::after {
+            content: " |";
+            margin-left: 6px;
+            color: #555;
+        }
+
+        h2 {
+            margin-top: 16px;
+            font-size: 20px;
+        }
+
+        .lista {
+            list-style: disc;
+            padding-left: 18px;
+            margin-top: 6px;
+        }
+
+        .lista li {
+            margin-bottom: 8px;
+        }
+
+        .periodo {
+            color: #444;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .linha-contato li:not(:last-child)::after {
+                content: "";
+                margin: 0;
+            }
+
+            .contato ul.linha-contato {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 6px;
+            }
+        }
+
+        @media print {
+            .linha-contato li:not(:last-child)::after {
+                content: " |";
+                margin-left: 6px;
+            }
+
+            .contato ul.linha-contato {
+                display: block !important;
+            }
+
+            .linha-contato li {
+                display: inline;
+                white-space: nowrap;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cv">
+        <header>
+            <h1 class="nome">Fábio Luís Brizotti Filho</h1>
+            <h3 class="cargo">Recepcionista | Controle de Acesso</h3>
+            <p class="localizacao">Tietê - São Paulo</p>
+            <section class="contato">
+                <ul class="linha-contato">
+                    <li><a class="linkb">(15) 98809-9622</a></li>
+                    <li><a class="linkb">fabioluisbrizotti@gmail.com</a></li>
+                    <li><a class="link" href="https://www.linkedin.com/in/fabiobrizotti/" target="_blank"
+                            rel="noopener noreferrer">linkedin.com/in/fabiobrizotti</a></li>
+                </ul>
+            </section>
+        </header>
+
+        <main>
+            <section>
+                <h2>Objetivo Profissional</h2>
+                <p>Atuar como Recepcionista, com foco em atendimento cordial, controle de acesso e organização da
+                    rotina de recepção.</p>
+            </section>
+
+            <section>
+                <h2>Resumo Profissional</h2>
+                <p>Profissional em início de carreira, com formação técnica em andamento e foco em rotinas de
+                    atendimento e organização de informações. Tenho experiência prática em projetos que exigiram
+                    comunicação clara, direcionamento de demandas e agilidade no contato com usuários por mensagens,
+                    além de disciplina para manter processos organizados. Em projeto de atendimento digital, contribuí
+                    para reduzir em 43% o tempo de espera e aumentar em 15% os resultados de conversão, mantendo padrão
+                    de qualidade no atendimento. Busco oportunidade para aplicar essas competências em atendimento
+                    presencial, recepção e controle de fluxo de pessoas.</p>
+            </section>
+
+            <section>
+                <h2>Experiência Relevante</h2>
+                <p><strong>Atendente Multifuncional Humanizado para WhatsApp (Projeto)</strong><br><span
+                        class="periodo">2025 - 2026</span></p>
+                <ul class="lista">
+                    <li>Estruturei o fluxo de atendimento e direcionamento de mensagens, com padronização de respostas e
+                        organização do contato com clientes.</li>
+                    <li>Contribuí para reduzir em aproximadamente 43% o tempo de espera no atendimento digital.</li>
+                    <li>Ajudei a melhorar a satisfação do cliente e gerar aumento de cerca de 15% nas vendas.</li>
+                </ul>
+
+                <p><strong>Triagem Automatizada para Banco de Talentos (Projeto)</strong><br><span
+                        class="periodo">2025</span></p>
+                <ul class="lista">
+                    <li>Organizei o recebimento de currículos por e-mail e o encaminhamento de informações para análise,
+                        com foco em clareza e agilidade no processo.</li>
+                    <li>Contribuí para reduzir em aproximadamente 89% o tempo de triagem manual, apoiando rotinas
+                        administrativas e de comunicação interna.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Formação Acadêmica</h2>
+                <ul class="lista">
+                    <li><strong>Curso Técnico em Desenvolvimento de Sistemas</strong> - ETEC Dr. Nelson Alves Vianna
+                        (2025 - 2026, em andamento)</li>
+                    <li><strong>Ensino Médio Técnico</strong> - Escola Estadual Plínio Rodrigues de Morais (2024 - 2026,
+                        em andamento)</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Competências</h2>
+                <ul class="lista">
+                    <li>Atendimento ao público com cordialidade, escuta ativa e comunicação objetiva.</li>
+                    <li>Organização de informações, registros e encaminhamento de demandas.</li>
+                    <li>Atendimento por mensagens e apoio ao direcionamento de contatos.</li>
+                    <li>Disciplina com processos, pontualidade e foco em qualidade no atendimento.</li>
+                    <li>Facilidade com ferramentas digitais (e-mail, sistemas web e rotinas informatizadas).</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Cursos Complementares</h2>
+                <ul class="lista">
+                    <li><strong>Fundamentos de TI: Hardware e Software</strong> - Fundação Bradesco (fev/2026)</li>
+                    <li><strong>The Legend of Python</strong> - Codedex (jan/2026)</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Informações Adicionais</h2>
+                <ul class="lista">
+                    <li>GitHub: <a class="link" href="https://github.com/fabioluis0312" target="_blank"
+                            rel="noopener noreferrer">github.com/fabioluis0312</a></li>
+                    <li>Interesse em atuar com recepção, atendimento presencial e suporte administrativo.</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+Você vai utilizar do index.html como currículo principal, onde será algo bruto para modificar o curriculum.html utilizando o prompt.md como roteiro a seguir, construa o curriculum.html com base no post.md.
+
+APENAS VEJA:
+reset.css
+default.css
+style.css
+
+Para deixar mais bonito.
