@@ -112,22 +112,21 @@
     /* MOBILE */
     @media (max-width: 768px) {
 
+        html,
         body {
-            padding: 8px;
-            background-color: #e3e3e3;
-            display: flex;
-            justify-content: center;
+            margin: 0;
+            padding: 0;
+            display: block;
         }
 
         .cv {
             width: 100%;
-            max-width: 420px;
-            min-height: auto;
+            max-width: 100%;
+            padding: 20px;
+            margin: 0;
+            box-sizing: border-box;
             height: auto;
-            padding: 16px;
-            margin: 0 auto;
-            border-radius: 6px;
-            box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+            max-height: none;
         }
 
         .linha-contato {

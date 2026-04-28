@@ -1,114 +1,58 @@
-Formatação: O currículo "Amigo do Robô"
-Antes do conteúdo, a forma importa. Multinacionais e plataformas como a Gupy usam sistemas que se perdem em layouts criativos.
-
-Simplicidade é regra: Use coluna única, texto alinhado à esquerda e fontes limpas como Arial ou Calibri (tamanho 10 a 12).
-
-O que evitar: Fotos (salvo se solicitado), gráficos, tabelas, ícones ou barras de progresso de habilidades.
-
-Extensão: No máximo duas páginas. Se for seu primeiro emprego, uma página é o ideal.
-
-Arquivo: Salve sempre em PDF para manter a formatação, mas tenha uma versão em Word (.docx), que muitos robôs leem com mais facilidade.
-
-Cabeçalho (Dados Pessoais)
-Deve conter apenas informações essenciais para contato e identificação inicial.
-
-Nome completo (sem abreviações).
-
-Cidade e Estado (não é necessário o endereço completo por segurança).
-
-Telefone de contato (com WhatsApp).
-
-E-mail profissional.
-
-URL do LinkedIn (essencial para presença digital).
-
-Aviso: Evite incluir CPF, RG ou fotos, a menos que a vaga especificamente solicite.
-E-mail profissional: Evite apelidos ou nomes informais (ex: use joao.silva@email.com
- em vez de joaozinho123@email.com
-).
-
-Objetivo Profissional
-
-Deve ser uma seção curta (geralmente uma linha) indicando o cargo ou a área pretendida.
-Se possível, ajuste o título para corresponder à nomenclatura exata usada na descrição da vaga para facilitar o "match" no ATS.
-
-Objetivo (Foco no Futuro): Uma linha com o título do cargo que você quer.
-Ex: "Objetivo: Auxiliar Administrativo".
-
-Resumo Profissional
-
-Um parágrafo de 3 a 5 frases (entre 100 e 150 palavras) no topo do documento.
-Ele funciona como um "trailer" da sua carreira, destacando suas principais qualificações, anos de experiência e conquistas mais relevantes.
-
-Resumo (O seu "Trailer"): Um parágrafo de 3 a 5 frases destacando quem você é, seu tempo de experiência e sua maior conquista.
-
-Use palavras-chave da vaga nesta seção para aumentar a relevância algorítmica e dar "match" com o sistema.
-
-Experiência Profissional
-
-Organizada em ordem cronológica inversa (da mais recente para a mais antiga).
-Não liste apenas tarefas. Empresas buscam quem gera impacto.
-
-Inclua nome da empresa, cargo e período.
-
-Método Google: Use a fórmula "Ação + Dado Numérico + Impacto".
-
-Foque em resultados mensuráveis, como redução de custos, aumento de conversão ou ganho de produtividade.
-
-Destaque de Eficiência (Tendência 2026): Mencione como o uso de ferramentas de IA (como Copilot ou ChatGPT) aumentou sua produtividade, por exemplo, entregando tarefas "3x mais rápido".
-
-Exemplo Geral:
-"Atendi uma média de 50 clientes por dia, mantendo um índice de satisfação de 98%".
-
-Exemplo de Gestão:
-"Liderei equipe de 10 pessoas, entregando o projeto com 30% de antecedência do prazo".
-
-Formação e Qualificações
-
-Educação: Nome do curso, instituição e ano de conclusão.
-
-Formação Acadêmica: Liste graduações, pós-graduações ou cursos técnicos, incluindo o nome da instituição e o ano de conclusão (ou previsão).
-
-Cursos Complementares: Liste apenas os que são relevantes para a vaga que você está disputando agora.
-
-Idiomas: Só coloque se tiver nível intermediário ou superior. Se for básico, mencione apenas se for relevante e seja honesto.
-
-Competências e Qualificações (Hard e Soft Skills)
-
-Technical Skills: Habilidades tangíveis como softwares, linguagens de programação ou metodologias.
-
-Seção de IA e Dados (Diferencial): Incluir termos como RAG (Retrieval-Augmented Generation), Large Language Models (LLMs) e Prompt Engineering é altamente valorizado no mercado atual.
-
-Soft Skills: Evite termos vazios como "proativo" isoladamente; prefira demonstrar essas qualidades através das suas conquistas na seção de experiência.
-
-Informações Adicionais (Opcional)
-
-Inclua:
-
-idiomas (apenas se for nível intermediário ou superior)
-
-certificações recentes (últimos 5 anos)
-
-projetos voluntários
-
-projetos acadêmicos relevantes para a vaga
-
-Recomendações de Formatação para ATS
-
-Para garantir que seu currículo seja lido corretamente por robôs de triagem:
-
-Layout Simples: Use coluna única e alinhamento à esquerda.
-
-Evite: Gráficos, tabelas, imagens, ícones, barras de progresso ou colunas complexas, que podem confundir o software.
-
-Formato do Arquivo: Salve em Word (.docx) ou PDF de texto (evite PDFs que são imagens digitalizadas).
-
-Fonte: Use fontes padrão e legíveis como Arial, Calibri ou Times New Roman, tamanho 10 a 12.
-
-Dicas de Ouro do Recrutador
-
-Personalize sempre: Nunca envie o mesmo currículo para todas as vagas. Ajuste o resumo e as palavras-chave para cada oportunidade.
-
-Revisão Implacável: Erros de português eliminam candidatos excelentes. Revise várias vezes.
-
-Atitude: O currículo abre a porta, mas sua proatividade e adaptabilidade são as habilidades (soft skills) mais buscadas hoje.
+Persona: Aja como um Consultor de Carreira Especialista em Recrutamento Tech e especialista em sistemas de rastreamento de candidatos (ATS)
+.
+Objetivo: Reestruturar as informações do meu currículo atual para que ele seja 100% aderente à descrição da vaga fornecida, focando em palavras-chave relevantes e resultados mensuráveis
+.
+Dados de Entrada:
+Meu Currículo Atual: index.html
+Descrição da Vaga: post.md
+Instruções de Estruturação:
+Resumo Profissional: Crie um resumo de no máximo 4 linhas que conecte minhas principais habilidades (como LLMs, Python e RAG) às "dores" descritas na vaga
+.
+1. Cabeçalho e Informações de Contato
+Nacional: Deve conter seu nome completo, cidade e estado de residência, telefone (WhatsApp) e um e-mail profissional
+. No Brasil, ainda é comum incluir idade e estado civil, mas nunca o endereço completo ou números de documentos por questões de privacidade
+.
+Internacional: Segue a mesma lógica, mas com atenção ao DDI no telefone
+. Em países como EUA e Canadá, omite-se foto, idade e estado civil para evitar critérios discriminatórios
+. Na Europa (modelo Europass), a foto e a nacionalidade podem ser aceitas ou até esperadas
+.
+2. Objetivo ou Resumo Profissional
+Objetivo Profissional: Ideal para quem está no início da carreira ou busca o primeiro emprego
+. Deve ser direto, mencionando o cargo ou a área de interesse
+.
+Resumo (Summary/Profile): Recomendado para profissionais com experiência
+. É um parágrafo de 3 a 5 linhas que resume suas principais qualificações e conquistas, conectando suas habilidades às necessidades da vaga
+.
+3. Experiência Profissional (Professional Experience)
+Esta é a parte crucial de qualquer currículo e deve seguir a ordem cronológica inversa (da experiência mais recente para a mais antiga)
+.
+Estrutura: Nome da empresa, cargo, período (mês/ano) e localização
+.
+Descrição de Atividades: Use bullet points e inicie as frases com verbos de ação fortes no passado (ex: "Desenvolvi", "Liderei", "Aumentei")
+.
+Destaque para Resultados: Em vez de apenas listar tarefas, quantifique suas conquistas com números ou porcentagens (ex: "Reduzi o tempo de triagem em 89%")
+. Recrutadores internacionais valorizam o impacto gerado mais do que a simples descrição da função
+.
+4. Formação Acadêmica (Education)
+Também deve seguir a ordem cronológica inversa
+.
+Inclua o nome da instituição, o título do curso e o ano de conclusão ou previsão
+.
+Para currículos internacionais, mencione intercâmbios e a modalidade do curso (presencial/online) se for relevante
+.
+5. Habilidades e Idiomas (Skills & Languages)
+Hard Skills: Liste competências técnicas específicas da sua área, como softwares, ferramentas e metodologias (ex: Python, MySQL, Metodologias Ágeis)
+.
+Idiomas: Indique seu nível de proficiência (básico, intermediário, avançado ou fluente)
+. No currículo internacional, mencione certificados de proficiência como TOEFL ou IELTS, que são diferenciais importantes
+.
+Soft Skills: No contexto internacional, essas habilidades interpessoais (liderança, comunicação) devem ser demonstradas através das experiências e resultados, mas podem ser listadas de forma sucinta se a vaga exigir
+.
+6. Informações Adicionais (Atividades Complementares)
+Inclua apenas o que for relevante para a vaga:
+Cursos e Certificações: Priorize aqueles que reforçam sua especialidade técnica
+.
+Projetos e Voluntariado: Experiências voluntárias e projetos pessoais (como links de portfólio ou GitHub) são altamente valorizados, especialmente no mercado americano
+.
+Vistos e Cidadania: Em currículos internacionais, é fundamental mencionar se você já possui visto de trabalho, permissão de residência ou dupla cidadania para o país de destino
+.

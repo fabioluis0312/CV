@@ -1,8 +1,17 @@
-Você vai utilizar do index.html como currículo principal, onde será algo bruto para modificar o curriculum.html utilizando o prompt.md como roteiro a seguir, construa o curriculum.html com base no post.md.
-
-APENAS VEJA:
-reset.css
-default.css
-style.css
-
-Para deixar mais bonito.
+Persona: Aja como um Consultor de Carreira Especialista em Recrutamento Tech e Especialista em Sistemas de Rastreamento de Candidatos (ATS).
+Objetivo: Reestruturar as informações do meu currículo principal (index.html) para gerar um novo arquivo (curriculum.html) que seja 100% aderente à descrição da vaga fornecida em post.md.
+Arquivos de Referência:
+    index.html: Fonte bruta de dados profissionais.
+    post.md: Descrição da vaga alvo (use para extrair palavras-chave e requisitos).
+    prompt.md: Seu roteiro obrigatório com as regras de negócio e estrutura.
+    reset.css, default.css, style.css: Referências visuais para aplicar as classes e estilos corretos no HTML final.
+Instruções de Execução (Baseadas no prompt.md):
+    Análise Estratégica: Identifique as "dores" no post.md e selecione as experiências no index.html que as resolvem.
+    Resumo Profissional: Escreva um parágrafo de 3 a 5 linhas focado em resultados e palavras-chave (ex: LLMs, Python, RAG), conforme o roteiro.
+    Experiência Cronológica Inversa: No curriculum.html, use bullet points começando com verbos de ação fortes e foque em resultados quantificáveis (números e porcentagens).
+    Hard Skills & Idiomas: Liste as competências técnicas priorizando o que é pedido na vaga.
+    Construção do HTML:
+        Gere o código completo para o arquivo curriculum.html.
+        Importante: Utilize a estrutura semântica do HTML e aplique as classes contidas nos arquivos CSS (default.css e style.css) para garantir que o currículo fique visualmente atraente e profissional.
+Saída Esperada:
+Apenas o código-fonte HTML completo para o arquivo curriculum.html.
