@@ -19,8 +19,8 @@
     <div class="cv">
         <header>
             <h1 class="nome">Fábio Luís Brizotti Filho</h1>
-            <h3 class="cargo">TI</h3>
-            <p class="localizacao">Jardim Brasil - Tietê - São Paulo</p>
+            <h3 class="cargo"><span id="idade">0</span> anos</h3>
+            <p class="localizacao">Jardim Brasil | Tietê - São Paulo</p>
             <section class="contato">
                 <ul class="linha-contato">
                     <li><a class="linkb">(15) 98809-9622</a></li>
@@ -38,13 +38,13 @@
         <main>
             <section>
                 <h2 style="font-size: 20px;">Objetivo</h2>
-                <p>Jovem Aprendiz | Estagiário nivel Médio em Suporte Técnico | TI</p>
+                <p>Jovem Aprendiz | Estagiário nivel Médio em TI</p>
             </section>
             <!-- Resumo Profissional -->
             <section>
                 <h2 style="margin-top: 20px; font-size: 20px;">Resumo Profissional</h2>
                 <p>Estudante de Desenvolvimento de Software.
-                    Buscando oportunidade na área de <strong>Suporte Técnico</strong> ou <strong>TI</strong>.
+                    Buscando oportunidade na área de <strong>TI</strong>.
                     Possui conhecimento base em sistemas operacionais, redes e resolução de problemas técnicos.
                     Perfil autodidata, com estudos constantes e interesse em evolução técnica contínua.</p>
             </section>
@@ -305,5 +305,24 @@
         </main>
     </div>
 </body>
+
+<script>
+    function idadeatual() {
+        const dataNascimento = new Date('2008-12-03');
+        const dataAtual = new Date();
+        let idade = dataAtual.getFullYear() - dataNascimento.getFullYear();
+        const mes = dataAtual.getMonth() - dataNascimento.getMonth();
+
+        if (mes < 0 || (mes === 0 && dataAtual.getDate() < dataNascimento.getDate())) {
+            idade--;
+        }
+
+        return idade;
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('idade').textContent = idadeatual();
+    });
+</script>
 
 </html>

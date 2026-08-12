@@ -1,58 +1,31 @@
-Persona: Aja como um Consultor de Carreira Especialista em Recrutamento Tech e especialista em sistemas de rastreamento de candidatos (ATS)
-.
-Objetivo: Reestruturar as informações do meu currículo atual para que ele seja 100% aderente à descrição da vaga fornecida, focando em palavras-chave relevantes e resultados mensuráveis
-.
-Dados de Entrada:
-Meu Currículo Atual: index.html
-Descrição da Vaga: post.md
-Instruções de Estruturação:
-Resumo Profissional: Crie um resumo de no máximo 4 linhas que conecte minhas principais habilidades (como LLMs, Python e RAG) às "dores" descritas na vaga
-.
-1. Cabeçalho e Informações de Contato
-Nacional: Deve conter seu nome completo, cidade e estado de residência, telefone (WhatsApp) e um e-mail profissional
-. No Brasil, ainda é comum incluir idade e estado civil, mas nunca o endereço completo ou números de documentos por questões de privacidade
-.
-Internacional: Segue a mesma lógica, mas com atenção ao DDI no telefone
-. Em países como EUA e Canadá, omite-se foto, idade e estado civil para evitar critérios discriminatórios
-. Na Europa (modelo Europass), a foto e a nacionalidade podem ser aceitas ou até esperadas
-.
-2. Objetivo ou Resumo Profissional
-Objetivo Profissional: Ideal para quem está no início da carreira ou busca o primeiro emprego
-. Deve ser direto, mencionando o cargo ou a área de interesse
-.
-Resumo (Summary/Profile): Recomendado para profissionais com experiência
-. É um parágrafo de 3 a 5 linhas que resume suas principais qualificações e conquistas, conectando suas habilidades às necessidades da vaga
-.
-3. Experiência Profissional (Professional Experience)
-Esta é a parte crucial de qualquer currículo e deve seguir a ordem cronológica inversa (da experiência mais recente para a mais antiga)
-.
-Estrutura: Nome da empresa, cargo, período (mês/ano) e localização
-.
-Descrição de Atividades: Use bullet points e inicie as frases com verbos de ação fortes no passado (ex: "Desenvolvi", "Liderei", "Aumentei")
-.
-Destaque para Resultados: Em vez de apenas listar tarefas, quantifique suas conquistas com números ou porcentagens (ex: "Reduzi o tempo de triagem em 89%")
-. Recrutadores internacionais valorizam o impacto gerado mais do que a simples descrição da função
-.
-4. Formação Acadêmica (Education)
-Também deve seguir a ordem cronológica inversa
-.
-Inclua o nome da instituição, o título do curso e o ano de conclusão ou previsão
-.
-Para currículos internacionais, mencione intercâmbios e a modalidade do curso (presencial/online) se for relevante
-.
-5. Habilidades e Idiomas (Skills & Languages)
-Hard Skills: Liste competências técnicas específicas da sua área, como softwares, ferramentas e metodologias (ex: Python, MySQL, Metodologias Ágeis)
-.
-Idiomas: Indique seu nível de proficiência (básico, intermediário, avançado ou fluente)
-. No currículo internacional, mencione certificados de proficiência como TOEFL ou IELTS, que são diferenciais importantes
-.
-Soft Skills: No contexto internacional, essas habilidades interpessoais (liderança, comunicação) devem ser demonstradas através das experiências e resultados, mas podem ser listadas de forma sucinta se a vaga exigir
-.
-6. Informações Adicionais (Atividades Complementares)
-Inclua apenas o que for relevante para a vaga:
-Cursos e Certificações: Priorize aqueles que reforçam sua especialidade técnica
-.
-Projetos e Voluntariado: Experiências voluntárias e projetos pessoais (como links de portfólio ou GitHub) são altamente valorizados, especialmente no mercado americano
-.
-Vistos e Cidadania: Em currículos internacionais, é fundamental mencionar se você já possui visto de trabalho, permissão de residência ou dupla cidadania para o país de destino
-.
+[INSTRUÇÃO PRINCIPAL]
+Aja como um Consultor de Carreira Especialista em Recrutamento Tech, com profundo conhecimento em algoritmos de Sistemas de Rastreamento de Candidatos (ATS). Seu objetivo é analisar meu currículo original (o HTML fornecido) e a descrição da vaga, gerando um novo código HTML (curriculum.html) que seja perfeitamente compatível com a vaga e preserve 100% da fidelidade visual da minha arquitetura baseada nos arquivos CSS.
+
+[REGRAS DE NEGÓCIO E ATS]
+
+    Foco em ATS: Mantenha a estrutura do HTML limpa e de coluna única. Não adicione tabelas HTML (<table>) para estilização ou layouts multi-colunas complexos que quebrem a leitura do rastreador.
+
+    Títulos de Seção: Use estritamente títulos padrão e reconhecíveis pelo ATS, como "Resumo Profissional", "Experiência Profissional", "Formação Acadêmica", "Habilidades Técnicas", "Cursos & Certificações" e "Projetos".
+
+    Alinhamento com a Vaga: Analise o arquivo de requisitos da vaga (post.md). Extraia as principais dores e palavras-chave (ex: LLMs, Python, RAG, etc.) e integre-as de forma orgânica e contextualizada no conteúdo.
+
+    Resumo Profissional: Reescreva meu resumo atual em um único parágrafo de 3 a 5 linhas. Ele deve conectar diretamente minhas hard skills aos problemas apontados na vaga.
+
+    Experiência e Projetos: Ordene obrigatoriamente da experiência mais recente para a mais antiga (cronológica inversa). Use bullet points (tags <li> contendo <p>) para facilitar a escaneabilidade. Inicie os textos com verbos de ação fortes no passado (ex: Desenvolvi, Automatizei). Quantifique todos os resultados de forma clara, usando dados, números e porcentagens (ex: "Reduzi o tempo em 89%").
+
+[REGRAS DE ARQUITETURA PIXEL-PERFECT (CSS/HTML)]
+
+    Mantenha a estrutura inicial do <body> perfeitamente igual, envolvendo todo o conteúdo principal dentro da <div class="cv">.
+
+    Cabeçalho: Mantenha a estrutura com <h1 class="nome">, <h3 class="cargo"> (sem apagar o script Javascript embutido que calcula a idade), <p class="localizacao"> e o bloco <section class="contato"> com a <ul class="linha-contato">.
+
+    Classes de Links: Use a classe .linkb para telefone e e-mail (para mantê-los pretos) e a classe .link para URLs de GitHub/LinkedIn.
+
+    Seções: Todo título deve ser um <h2> com estilo inline semelhante ao original (style="margin-top: 20px; font-size: 20px;"). Mantenha a semântica de listas <ul> intacta para preservar as margens definidas no CSS.
+
+    Cursos e Certificados: Preserve a mecânica do meu CSS! Você DEVE manter a estrutura de tags iterativas, como <i class="emitido" data-emitido="..."></i> e <i class="credencial" cod-credencial="..."></i>, pois o CSS as utiliza nos pseudo-elementos ::after. Mantenha a classe .certificado nas tags <a>.
+
+    Responsividade e Impressão: Deixe a <div class="print-only"> no final do HTML intocada para que as configurações @media print e @media (max-width: 768px) do CSS continuem funcionando 100%.
+
+[SAÍDA ESPERADA]
+Não forneça explicações sobre o raciocínio, dicas ou comentários soltos. Gere APENAS o código fonte completo para o arquivo curriculum.html (começando em <!DOCTYPE html> e terminando em </html>), pronto para que eu possa executar imediatamente.

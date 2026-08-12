@@ -1,22 +1,27 @@
 h1 {
     font-weight: 700;
+    font-size: 12px;
 }
 
 h2 {
     font-weight: 600;
+    font-size: 12px;
 }
 
 h3 {
     font-weight: 500;
+    font-size: 12px;
 }
 
 h4 {
     font-weight: 400;
+    font-size: 12px;
 }
 
 p {
     font-weight: 400;
     margin-top: 5px;
+    font-size: 12px;
 }
 
 strong {
@@ -24,7 +29,7 @@ strong {
 }
 
 html {
-    font-family: 'New Times Roman', Times, serif;
+    font-family: 'Arial', sans-serif;
     background: #ccc;
     color: #000;
     padding: 0px;
