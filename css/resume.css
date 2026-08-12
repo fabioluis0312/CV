@@ -1,0 +1,53 @@
+/* Estilo minimalista para currículo — foco em legibilidade e impressão */
+:root{
+  --max-width:780px;
+  --accent:#111;
+  --muted:#606060;
+}
+/* Forçar tamanho de fonte 12px conforme NBR 6024 */
+body { font-size: 12px; }
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color:var(--accent);
+  background: #fff;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  padding:20px;
+}
+.page{
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:28px 34px;
+  border-radius:6px;
+}
+.header{ text-align:left; margin-bottom:6px }
+.name{ font-size:12px; font-weight:700; letter-spacing:0.2px; margin:0 }
+.meta{ color:var(--muted); margin:6px 0 2px; font-size:12px }
+.links{ color:var(--muted); font-size:12px; margin:0 0 12px }
+.links a{ color:var(--accent); text-decoration:none }
+.section{ margin:12px 0 }
+.section-title{ font-size:12px; font-weight:700; margin:0 0 8px; text-transform:none }
+.justificado{ text-align:justify; line-height:1.25; margin:0 }
+.skills{ list-style:none; padding:0; margin:0 }
+.skills li{ margin:6px 0; font-size:12px }
+.project{ margin:8px 0 }
+.project-title{ font-size:12px; margin:0 0 6px; font-weight:700 }
+.compact-list{ list-style:none; padding:0; margin:0 }
+.compact-list li{ margin:6px 0; font-size:12px }
+.footer{ margin-top:18px; color:var(--muted); font-size:12px }
+.small{ margin:0; text-align:center }
+
+/* Impressão A4 otimizada */
+@media print{
+  body{ padding:0 }
+  .page{ box-shadow:none; border:none; padding:18mm; max-width:210mm }
+  a:after{ content:"" }
+}
+
+/* Ajustes responsivos */
+@media (max-width:520px){
+  .page{ padding:18px }
+  .name{ font-size:12px }
+}
