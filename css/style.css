@@ -4,10 +4,13 @@ body {
     align-items: center;
     padding: 40px 0;
     margin: 20px;
+    /* Não alterar família de fontes (herdar do documento) e garantir tamanho único */
+    font-family: inherit;
+    font-size: 12px;
 }
 
 section {
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 p {
@@ -27,30 +30,24 @@ p {
     border-radius: 2px;
 }
 
+
 .contato a {
     text-decoration: none;
     font-size: 12px;
 }
 
 .nome {
-    margin-top: 0;
-    margin-bottom: -5px;
     text-align: center;
-    font-size: 32px;
+    font-size: 12px;
 }
 
-.cargo {
-    text-align: center;
-    margin-bottom: -4px;
-    font-weight: normal;
-    font-size: 19px;
-    color: #555;
-}
 
+.idade,
 .localizacao {
     text-align: center;
+    justify-content: space-between;
     margin-bottom: 5px;
-    font-size: 0.95rem;
+    font-size: 12px;
 }
 
 .linkb {
@@ -65,13 +62,12 @@ p {
 
 .linha-contato {
     text-align: center;
-    font-size: 0.87rem;
-    margin-bottom: 10px;
+
 }
 
 .header {
     text-align: center;
-    margin-bottom: 25px;
+
 }
 
 .contato ul.linha-contato {
@@ -84,23 +80,11 @@ p {
     width: 100%;
 }
 
-h2 {
-    margin: 20px 0 8px;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 1.4;
-}
 
-h3 {
-    margin: 14px 0 8px;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 1.4;
-}
 
 p,
 li {
-    font-size: 11pt;
+    font-size: 12px;
     line-height: 1.5;
 }
 
@@ -120,7 +104,7 @@ li {
 
 .titulo-projeto {
     margin-top: 12px;
-    font-size: 16px;
+    font-size: 12px;
 }
 
 .cursos i::after {
@@ -168,32 +152,32 @@ li {
     }
 
     .nome {
-        font-size: 1.35rem;
+        font-size: 12px;
         line-height: 1.2;
         margin-bottom: 10px;
         text-align: center;
     }
 
     .cargo {
-        font-size: 19px;
+        font-size: 12px;
         margin-bottom: 6px;
         text-align: center;
     }
 
     .localizacao {
-        font-size: 0.9rem;
+        font-size: 12px;
         margin-bottom: 5px;
         text-align: center;
     }
 
     h2 {
-        font-size: 1.05rem;
+        font-size: 12px;
         margin-top: 16px;
     }
 
     p,
     li {
-        font-size: 0.95rem;
+        font-size: 12px;
         line-height: 1.55;
     }
 }
@@ -211,18 +195,10 @@ li {
         display: block;
     }
 
-    .nome {
-        font-size: 24pt;
-        margin-bottom: 4pt;
-    }
 
-    .cargo {
-        font-size: 16pt;
-        margin-bottom: 1pt;
-    }
 
     .localizacao {
-        font-size: 11.5pt;
+
         margin-bottom: 2pt;
     }
 
@@ -249,7 +225,7 @@ li {
     .linha-contato li {
         display: inline;
         white-space: nowrap;
-        font-size: 9.5pt;
+  
     }
 
     .linha-contato li:not(:last-child)::after {
