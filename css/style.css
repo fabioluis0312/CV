@@ -1,0 +1,271 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+    margin: 20px;
+}
+
+section {
+    margin-top: 10px;
+}
+
+p {
+    text-align: justify;
+}
+
+.cv {
+    width: 210mm;
+    height: auto;
+    min-height: 297mm;
+    background: #fff;
+    color: #000;
+    list-style: none;
+    padding: 20mm;
+    line-height: 1.5;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+}
+
+.contato a {
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.nome {
+    margin-top: 0;
+    margin-bottom: -5px;
+    text-align: center;
+    font-size: 32px;
+}
+
+.cargo {
+    text-align: center;
+    margin-bottom: -4px;
+    font-weight: normal;
+    font-size: 19px;
+    color: #555;
+}
+
+.localizacao {
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+}
+
+.linkb {
+    color: #000;
+    text-decoration: none;
+}
+
+.link {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+.linha-contato {
+    text-align: center;
+    font-size: 0.87rem;
+    margin-bottom: 10px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.contato ul.linha-contato {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+}
+
+h2 {
+    margin: 20px 0 8px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+h3 {
+    margin: 14px 0 8px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+p,
+li {
+    font-size: 11pt;
+    line-height: 1.5;
+}
+
+ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 4px;
+}
+
+.projetos ul li {
+    list-style-type: disc;
+    margin-bottom: 6px;
+}
+
+.titulo-projeto {
+    margin-top: 12px;
+    font-size: 16px;
+}
+
+.cursos i::after {
+    content: attr(data-emitido) attr(cod-credencial);
+    font-style: italic;
+    float: right;
+    color: #555;
+}
+
+.certificado {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        display: block;
+    }
+
+    .cv {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px;
+        margin: 0;
+        box-sizing: border-box;
+        height: auto;
+        max-height: none;
+    }
+
+    .linha-contato {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 1px;
+    }
+
+    .linha-contato li {
+        display: block;
+        margin: 0;
+        padding: 0;
+        line-height: 1.2;
+    }
+
+    .nome {
+        font-size: 1.35rem;
+        line-height: 1.2;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .cargo {
+        font-size: 19px;
+        margin-bottom: 6px;
+        text-align: center;
+    }
+
+    .localizacao {
+        font-size: 0.9rem;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 1.05rem;
+        margin-top: 16px;
+    }
+
+    p,
+    li {
+        font-size: 0.95rem;
+        line-height: 1.55;
+    }
+}
+
+@media print {
+    @page {
+        size: A4;
+        margin: 10px;
+    }
+
+    body {
+        background: #fff;
+        margin: 0;
+        padding: 0;
+        display: block;
+    }
+
+    .nome {
+        font-size: 24pt;
+        margin-bottom: 4pt;
+    }
+
+    .cargo {
+        font-size: 16pt;
+        margin-bottom: 1pt;
+    }
+
+    .localizacao {
+        font-size: 11.5pt;
+        margin-bottom: 2pt;
+    }
+
+    .cv {
+        width: auto;
+        max-width: 210mm;
+        min-height: auto;
+        height: auto;
+        margin: 0 auto;
+        padding: 14mm 16mm;
+        background: #fff;
+        box-shadow: none;
+        border-radius: 0;
+        line-height: 1;
+    }
+
+    .linha-contato {
+        display: block;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .linha-contato li {
+        display: inline;
+        white-space: nowrap;
+        font-size: 9.5pt;
+    }
+
+    .linha-contato li:not(:last-child)::after {
+        content: " | ";
+    }
+
+    .contato ul {
+        display: block !important;
+    }
+
+    .link {
+        color: #000;
+        text-decoration: none;
+    }
+
+    .certificado {
+        display: none;
+    }
+}
